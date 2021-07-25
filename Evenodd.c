@@ -19,19 +19,23 @@ int main()
 
 void iseven(int n1, int n2)//definition of iseven function
 {
-    if (n1<=n2 && n1%2==0)
+    if (n1<=n2 && n1%2==0)//base case
     {
         printf("%d is an even number\n",n1);
         isodd(n1+1,n2);//indirect recursion
+    }
+    else
+    {
+        isodd(n1, n2);//indirect recursion
     }       
 }
 
 void isodd(int x, int n2)//definition of isodd function
 {
 
-    if(x<=n2 && x%2!=0)
+    if(x<=n2 && x%2!=0)//base case
     {
         printf("%d is an odd number\n", x);
-        iseven(x+1, n2);//indirect recursion
+        iseven(x+1, n2);
     }
 }
