@@ -34,5 +34,9 @@ int negative(int arr[], int start, int length)
             printf("%d is a negative number\n", neg);
             negative(arr, start+1, length);//recursive call
         }
+        else
+        {
+            negative(arr, start+1, length);//recursive call
+        }
     }
 }
