@@ -4,7 +4,7 @@ int arr[Max_Size];
 int start = 0;
 int length;//variable to store the array size
 int i;
-int printarr(int arr[], int length);//function to print the elements of the array
+int printarr(int arr[], int start, int length);//function to print the elements of the array
 
 
 int main()
@@ -16,9 +16,10 @@ int main()
     {
         scanf("%d", &arr[i]);
     }
-    printarr(arr, length);
+    printarr(arr, start, length);
 }
-int printarr(int arr[start], int length)//definition of printarr function
+
+int printarr(int arr[], int start, int length)//definition of printarr function
 {
     if(start>=length)//base case
     {
@@ -26,7 +27,7 @@ int printarr(int arr[start], int length)//definition of printarr function
     }
     else
     {
-        printf("element %d = %d",start, arr[start]);
-        printarr(arr[start+1], length); //recursive call
+        printf("element %d = %d\n",start, arr[start]);
+        printarr(arr, start+1, length); //recursive call
     }
 }
